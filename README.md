@@ -1,4 +1,4 @@
-- <p align="center">
+<p align="center">
   <a href="URL">
     <img src="https://github.com/NationalSecurityAgency/fractalrabbit/blob/master/RabbitProfile.jpg.jpg" alt="" width=134 height=144>
   </a>
@@ -32,7 +32,12 @@
 ## Quick start
 
 Several quick start options are available: 
+<p>
 <a href="https://github.com/NationalSecurityAgency/fractalrabbit/blob/master/RetroPreferentialSporadicSimulator.nb">Mathematica Notebook</a>
+	</p>
+<p>
+<a href="https://github.com/NationalSecurityAgency/fractalrabbit/blob/master/RetroPreferentialSporadicSimulatorCopy.pdf"> Text version </a>
+	</p>
 
 ## Status
 
