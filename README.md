@@ -35,13 +35,10 @@ The FRACTALRABBIT stochastic mobility simulator creates realistic synthetic spor
 
 Several quick start options are available: 
 <p>
-<a href="https://github.com/NationalSecurityAgency/fractalrabbit/blob/master/RetroPreferentialSporadicSimulator.nb">Mathematica Notebook</a>
-	</p>
+<a href="https://github.com/NationalSecurityAgency/fractalrabbit/blob/master/RetroPreferentialSporadicSimulator.nb">Mathematica Notebook</a></p>
 <p>
-<a href="https://github.com/NationalSecurityAgency/fractalrabbit/blob/master/RetroPreferentialSporadicSimulatorCopy.pdf"> Text version </a>
-	</p>
-	
-	<p>
+<a href="https://github.com/NationalSecurityAgency/fractalrabbit/blob/master/RetroPreferentialSporadicSimulatorCopy.pdf"> Text version </a></p>	
+<p>
 <a href="https://github.com/NationalSecurityAgency/fractalrabbit/blob/master/RetroPreferentialSporadicSimulator.py"> Python Version </a>
 </p>
 
