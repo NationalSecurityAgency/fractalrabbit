@@ -4,13 +4,15 @@
   </a>
 
   <h3 align="center">FRACTALRABBIT</h3>
-
-  <p align="center">
+<p>
     - The FRACTALRABBIT stochastic mobility simulator creates realistic synthetic sporadic waypoint data sets. It consist of three tiers, each based on new stochastic models: </p>
-<p>	
+
+  <p align="center">	
 	 - (1) An Agoraphobic Point Process generates a set V of space points, whose limit is a random fractal, representing sites that could be visited. </p>
-<p>	 - (2) A Retro-preferential Process generates a trajectory X through V , with strategic homing and self-reinforcing site ﬁdelity as observed in human/animal behavior. </p>
-<p>	 - (3) A Sporadic Reporting Process models time points T at which the trajectory X is observed, with bursts of reports and heavy tailed inter-event times.</p>
+
+  <p align="center">	 - (2) A Retro-preferential Process generates a trajectory X through V , with strategic homing and self-reinforcing site ﬁdelity as observed in human/animal behavior. </p>
+
+  <p align="center">	 - (3) A Sporadic Reporting Process models time points T at which the trajectory X is observed, with bursts of reports and heavy tailed inter-event times.</p>
   </p>
 </p>
 
