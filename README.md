@@ -19,7 +19,7 @@
 ## Table of contents
 
 - [Quick start](#quick-start)
-- [Status](#status)
+ 2.0- [Status](#status)
 - [What's included](#whats-included)
 - [Bugs and feature requests](#bugs-and-feature-requests)
 - [Documentation](#documentation)
@@ -33,7 +33,7 @@
 
 Several quick start options are available:
 
-- [Download the latest release.](URL)
+- [Download the latest release.]("https://github.com/NationalSecurityAgency/fractalrabbit/blob/master/RetroPreferentialSporadicSimulator.nb")
 
 
 
@@ -47,8 +47,7 @@ Several quick start options are available:
 - Python implementation (2017), for single trajectory
 
 ## Bugs and feature requests
-
-- Have a bug or a feature request? 
+- Have a bug or a feature request? Email rwdarli@nsa.gov
 
 ## Documentation
 - See technical report: Retro-preferential Stochastic Mobility Models on Random Fractals Under Sporadic Observations, R.W.R. Darling, 2018 
@@ -62,8 +61,6 @@ Several quick start options are available:
 ## Versioning
 - Will begin with the Java release.
 
-
-
 ## Creators
 
 **R. W. R. Darling**
@@ -72,4 +69,4 @@ http://probabilist.us
 
 ## Copyright and license
 
-Apache License
+Apache License 2.0
