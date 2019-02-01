@@ -55,7 +55,7 @@ Several quick start options are available:
 - Have a bug or a feature request? Email rwdarli@nsa.gov
 
 ## Documentation
-- See technical report: Retro-preferential Stochastic Mobility Models on Random Fractals Under Sporadic Observations, R.W.R. Darling, 2018 
+- See<a = href="https://github.com/NationalSecurityAgency/fractalrabbit/wiki">Wiki</a>. 
 
 ## Contributing
 - New implementations of the three underlying models described in the technical report are welcome.
