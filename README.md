@@ -55,7 +55,7 @@ Several quick start options are available:
 - Have a bug or a feature request? Email rwdarli@nsa.gov
 
 ## Documentation
-- See<a = href="https://github.com/NationalSecurityAgency/fractalrabbit/wiki">Wiki</a>. 
+- See <a href="https://github.com/NationalSecurityAgency/fractalrabbit/wiki">Wiki</a>. 
 
 ## Contributing
 - New implementations of the three underlying models described in the technical report are welcome.
