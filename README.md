@@ -45,7 +45,7 @@ Several quick start options are available:
 ## Status
 
 - (2017 VERSIONS) single trajectory models
-- (COMING IN 2018) Java version, for multiple paths
+- (COMING IN 2019) Java version, for multiple paths
 
 ## What's included
 - Mathematica Notebook (2017), and pdf printout, for single trajectory
