@@ -18,10 +18,6 @@ import java.util.List;
  */
 public class ParameterCSVReader {
 
-	public ParameterCSVReader() {
-
-	}
-
 	/**
 	 * @param args
 	 */

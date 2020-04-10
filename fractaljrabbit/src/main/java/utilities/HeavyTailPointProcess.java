@@ -20,7 +20,7 @@ import java.util.Random;
  */
 public class HeavyTailPointProcess {
 
-	Random g;
+	private final Random g;
 
 	public HeavyTailPointProcess() {
 		g = new Random();
@@ -58,14 +58,14 @@ public class HeavyTailPointProcess {
 			timeSeries.add(lastTime);
 		}
 		double[] x = new double[timeSeries.size() - 1]; // skip last time, which exceeds bound
-		Arrays.setAll(x, j -> timeSeries.get(j));
+		Arrays.setAll(x, timeSeries::get);
 		return x;
 	}
 	
 	public double meanRate(double lo, double hi, double alpha) {
 		double u0 = Math.pow(hi, 1.0 / alpha); // hi gives LOWER bound on U
 		double u1 = Math.pow(lo, 1.0 / alpha);
-		double c = 1.0 + alpha; 
+		double c = 1.0 + alpha;
 		double paretoMean = (Math.pow(u0, c) - Math.pow(u1, c)) / ((-1.0 - alpha) *(u1 - u0));
 		return paretoMean;
 	}

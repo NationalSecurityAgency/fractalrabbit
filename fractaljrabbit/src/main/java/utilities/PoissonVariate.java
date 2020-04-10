@@ -11,11 +11,9 @@ import java.util.Random;
  */
 public class PoissonVariate {
 
-	/**
-	 * 
-	 */
-	double lambda;
-	Random g;
+	private final double lambda;
+	private final Random g;
+
 	public PoissonVariate(double lam) {
 		this.lambda = lam;
 		this.g= new Random();

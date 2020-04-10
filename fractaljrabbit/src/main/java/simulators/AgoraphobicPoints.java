@@ -36,36 +36,33 @@ import java.util.function.IntToDoubleFunction;
  *
  */
 public class AgoraphobicPoints {
-    int nPoints, dimEuclid;
-    double dimHausdorff, innovation;
-    SpacePointGenerator p;
-    List<double[]> points;
-    MutableValueGraph<double[], Double> rootedTree;
-    final double[] radialBounds;
-    Random g;
-    int totalSamples;
+    private final int nPoints;
+    private final double dimHausdorff;
+    private final double innovation;
+    private final List<double[]> points;
+    private final MutableValueGraph<double[], Double> rootedTree;
+    private int totalSamples;
 
     /**
      * Class constructor which accepts model parameters and generates points
      */
     public AgoraphobicPoints(int n, int d, double h, double theta) {
         this.nPoints = n;
-        this.dimEuclid = d;
         this.dimHausdorff = h;
         this.innovation = theta;
-        this.p = new SpacePointGenerator(this.dimEuclid);
-        this.radialBounds = new double[this.nPoints];
-        Arrays.setAll(this.radialBounds, i -> (i > 0 ? Math.pow(i, -1.0 / this.dimHausdorff) : 1.0));
-        this.g = new Random();
+        SpacePointGenerator p = new SpacePointGenerator(d);
+        double[] radialBounds = new double[this.nPoints];
+        Arrays.setAll(radialBounds, i -> (i > 0 ? Math.pow(i, -1.0 / this.dimHausdorff) : 1.0));
+        Random g = new Random();
         /*
          * Nodes of the rooted tree are stored in a List for random retrieval purposes.
          */
         this.rootedTree = ValueGraphBuilder.directed().build();
-        this.points = new ArrayList<double[]>();
+        this.points = new ArrayList<>();
         /*
          * Root vertex at zero
          */
-        this.points.add(this.p.zeroVector());
+        this.points.add(p.zeroVector());
         this.rootedTree.addNode(this.points.get(0));
         /*
          * Set the probability of starting a new clump, as in Chinese restaurant
@@ -82,7 +79,7 @@ public class AgoraphobicPoints {
              * is the parent of the new point.
              */
             if (g.nextDouble() < newClumpRate.applyAsDouble(i)) {
-                this.points.add(this.p.samplePointUnitDisk());
+                this.points.add(p.samplePointUnitDisk());
                 this.totalSamples++;
                 /*
                  * Adding this edge also adds the new node to the tree.
@@ -99,14 +96,14 @@ public class AgoraphobicPoints {
                 acceptPoint = false;
                 while (!acceptPoint) {
                     parent = g.nextInt(i);
-                    double[] candidate = this.p.sampleNearbyPoint(this.radialBounds[i], this.points.get(parent));
+                    double[] candidate = p.sampleNearbyPoint(radialBounds[i], this.points.get(parent));
                     this.totalSamples++;
                     /*
                      * Count close neighbors in order to determine rejection probability
                      */
                     neighborCount = 0;
                     for (double[] x : this.points) {
-                        if (SpacePointGenerator.distance(x, candidate) < this.radialBounds[i]) {
+                        if (SpacePointGenerator.distance(x, candidate) < radialBounds[i]) {
                             neighborCount++;
                         }
                     }

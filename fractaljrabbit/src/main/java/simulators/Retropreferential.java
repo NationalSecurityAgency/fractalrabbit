@@ -23,23 +23,23 @@ import java.util.function.IntToDoubleFunction;
 
 public class Retropreferential {
 
-    int numPlaces;
+    private final int numPlaces;
     /*
      * finite metric space - States of the process
      */
-    Metrizable[] points;
+    private final Metrizable[] points;
     /*
      * rate.get(k)[j] is raw rate of transition from points[j] to points[k],
      * computable on demand using freshRateVector(k)
      */
-    Map<Integer, double[]> rate;
-    double exponent; // Negative, e.g. -2.0
-    Set<Integer> placesVisited;
-    boolean[] isVisited;
-    double[] visitTally;
-    ReweightedMultinomialTrial revisitor;
-    CensoredMultinomialTrial explorer;
-    Random g;
+    private final Map<Integer, double[]> rate;
+    private final double exponent; // Negative, e.g. -2.0
+    private final Set<Integer> placesVisited;
+    private final boolean[] isVisited;
+    private final double[] visitTally;
+    private final ReweightedMultinomialTrial revisitor;
+    private final CensoredMultinomialTrial explorer;
+    private final Random g;
 
     /*
      * Constructor
@@ -53,12 +53,12 @@ public class Retropreferential {
         this.numPlaces = pointsArray.length;
         this.exponent = exponent;
         // keep track of Set of indices which have occurred so far
-        this.placesVisited = new HashSet<Integer>();
+        this.placesVisited = new HashSet<>();
         this.isVisited = new boolean[this.numPlaces];
         this.visitTally = new double[this.numPlaces];
         this.revisitor = new ReweightedMultinomialTrial(); // tested
         this.explorer = new CensoredMultinomialTrial(this.numPlaces); // tested
-        this.rate = new HashMap<Integer, double[]>();
+        this.rate = new HashMap<>();
         this.g = new Random();
     }
 
@@ -97,7 +97,7 @@ public class Retropreferential {
         Arrays.setAll(this.visitTally, i -> (i == start) ? 1.0 : 0.0);
         int state = start;
         // indices of sequence of places visited along trajectory
-        ArrayList<Integer> x = new ArrayList<Integer>();
+        ArrayList<Integer> x = new ArrayList<>();
         x.add(state);
         // this data may have been left over from a previous trajectory
         if (!this.rate.containsKey(state)) {

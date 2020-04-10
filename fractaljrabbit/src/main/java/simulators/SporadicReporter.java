@@ -27,45 +27,47 @@ import java.util.stream.Collectors;
  *
  */
 public class SporadicReporter {
+    // seasonality
+    private static final double alphaDaily = 4.17;
+    // seasonality
+    private static final double betaDaily = 2.98;
     /*
      * finite metric space - States of the process
      */
-    Metrizable[] points;
+    private final Metrizable[] points;
 
     /**
      * Truncated Pareto inter-event times, with final parameters
      */
-    HeavyTailedPartialSums htps;
-    IrregularBinAssignment iba;
-    BetaDistribution dist;
+    private final HeavyTailedPartialSums htps;
+    private final IrregularBinAssignment iba;
+    private final BetaDistribution dist;
 
-    double speedbound; // units per day
-    double kilometersPerUnit; // # km per one distance unit for points
-    static double  alphaDaily = 4.17; // seasonality
-    static double betaDaily = 2.98; // seasonality
+    private final double speedbound; // units per day
 
     /*
      * Once an arrival time T_i to x_i is known, prevent x_{i-1} reportTimes from
      * being inserted at times T_i - s which would potentially violate speed bound.
      */
-    List<Double> uniformOrderStatistics;
-    List<Double> cumulativeTravelTime;
-    List<Double> reportTimes;
-    List<Integer> reportPlaces;
-    Random g;
+    private final List<Double> uniformOrderStatistics;
+    private final List<Double> cumulativeTravelTime;
+    private final List<Double> reportTimes;
+    private final List<Integer> reportPlaces;
+    private final Random g;
 
     public SporadicReporter(Metrizable[] pointsArray, double maxKmPerHour, double kmper1) {
 
-        this.kilometersPerUnit = kmper1; // Drop?
+        // # km per one distance unit for points
         this.speedbound = 24.0 * maxKmPerHour / (kmper1); // measured in units per day
         this.points = pointsArray;
         this.htps = new HeavyTailedPartialSums();
         this.iba = new IrregularBinAssignment();
+
         this.dist = new BetaDistribution(alphaDaily, betaDaily);
-        this.uniformOrderStatistics = new ArrayList<Double>();
-        this.cumulativeTravelTime = new ArrayList<Double>();
-        this.reportTimes = new ArrayList<Double>();
-        this.reportPlaces = new ArrayList<Integer>();
+        this.uniformOrderStatistics = new ArrayList<>();
+        this.cumulativeTravelTime = new ArrayList<>();
+        this.reportTimes = new ArrayList<>();
+        this.reportPlaces = new ArrayList<>();
 
         this.g = new Random();
     }

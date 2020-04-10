@@ -19,13 +19,13 @@ public class ReweightedMultinomialTrial {
 	 * Set of states to be sampled from is delivered as a (small) Set. Rates of transition
 	 * are multiplied by frequencies of previous visits.
 	 */
-	Random g;
+	private final Random g;
 	// For integer k < n, g.get(k) will be an unnormalized rate of transition to k
-	Map<Integer, Double> q;
+	private final Map<Integer, Double> q;
 
 	public ReweightedMultinomialTrial() {
 		g = new Random();
-		this.q = new HashMap<Integer, Double>();
+		this.q = new HashMap<>();
 	}
 
 	/*

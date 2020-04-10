@@ -15,8 +15,9 @@ import java.util.Arrays;
 import java.util.Random;
 
 public class ScatterPlotInputData implements ExampleChart<XYChart> {
-	double[] x, y;
-	String legend;
+	private final double[] x;
+	private final double[] y;
+	private final String legend;
 
 	public ScatterPlotInputData(String title, double[] xData, double[] yData) {
 		this.x = xData;
@@ -48,7 +49,7 @@ public class ScatterPlotInputData implements ExampleChart<XYChart> {
 		ScatterPlotInputData scatter = new ScatterPlotInputData("test", x, y);
 		//ExampleChart<XYChart> exampleChart = new ScatterChart01();
 		XYChart chart = scatter.getChart();
-		new SwingWrapper<XYChart>(chart).displayChart();
+		new SwingWrapper<>(chart).displayChart();
 	}
 
 }
