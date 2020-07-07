@@ -10,8 +10,9 @@ package utilities;
  */
 public class EuclideanPoint implements Metrizable {
 
-	double[] point;
-	int dimension;
+	private final double[] point;
+	private final int dimension;
+
 	public EuclideanPoint(double[] p) {
 		this.point = p;
 		this.dimension = p.length;

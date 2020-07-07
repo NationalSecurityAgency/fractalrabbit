@@ -18,9 +18,9 @@ import java.util.function.ToDoubleBiFunction;
  * 8.8.18 with functional interfaces added
  */
 public class SpacePointGenerator{
-	int d;
-	final double[] zerovec;
-	Random g;
+	private final int d;
+	private final double[] zerovec;
+	private final Random g;
 
 	/**
 	 * Constructor given a dimension
@@ -83,7 +83,7 @@ public class SpacePointGenerator{
 	/*
 	 * Lambda version of the latter
 	 */
-	public ToDoubleBiFunction<double[],double[]> distance = ((v1, v2)-> distance(v1, v2));
+	public ToDoubleBiFunction<double[],double[]> distance = (SpacePointGenerator::distance);
 	
 
 	public static boolean equalPoints(double[] vector1, double[] vector2) {
@@ -97,5 +97,5 @@ public class SpacePointGenerator{
 	/*
 	 * Lambda version of the latter
 	 */
-	public BiPredicate<double[],double[]> equalPoints =((v1, v2)-> equalPoints(v1, v2));
+	public BiPredicate<double[],double[]> equalPoints =(SpacePointGenerator::equalPoints);
 }

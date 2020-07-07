@@ -20,7 +20,7 @@ import java.util.stream.Collectors;
  *
  */
 public class HeavyTailedPartialSums {
-	Random g;
+	private final Random g;
 	/**
 	 * 
 	 */
@@ -46,7 +46,7 @@ public class HeavyTailedPartialSums {
 		// Simulate truncated Pareto random variables
 		double[] y = g.doubles(count + 1).boxed().mapToDouble(x->Math.pow(1.0 + (u1 - 1.0) * x, alpha) ).toArray();
 		// Partial sums
-		DoubleBinaryOperator partialSum = (y1, y2) -> y1 + y2;
+		DoubleBinaryOperator partialSum = Double::sum;
 		Arrays.parallelPrefix(y, partialSum); 
 		double sum = y[count]; // this index exists!
 		// drop last value which must be 1.0

@@ -43,14 +43,14 @@ public class MainClass
     /*
      * Three tiers of the FRACTALRABBIT simulator
      */
-    AgoraphobicPoints app;
-    Retropreferential rpp;
-    SporadicReporter spore;
-    List<List<Integer>> trajectoryList;
-    Map<Integer, Integer> trajectoryAssignment; // traveler to trajectory number
-    List<Integer> coTravellers;
-    Map<Integer, List<Double>> reportTimesAssignment; // traveler to list of report times
-    Map<Integer, List<Integer>> reportPlacesAssignment; // traveler to list of point references (at given times)
+    private final AgoraphobicPoints app;
+    private final Retropreferential rpp;
+    private final SporadicReporter spore;
+    private final List<List<Integer>> trajectoryList;
+    private final Map<Integer, Integer> trajectoryAssignment; // traveler to trajectory number
+    private final List<Integer> coTravellers;
+    private final Map<Integer, List<Double>> reportTimesAssignment; // traveler to list of report times
+    private final Map<Integer, List<Integer>> reportPlacesAssignment; // traveler to list of point references (at given times)
 
     /*
      * Minimal parameters to create an instance of each simulator Some are
@@ -62,14 +62,14 @@ public class MainClass
         Arrays.setAll(euclidPoints, j -> new EuclideanPoint(app.getPoints().get(j)));
         this.rpp = new Retropreferential(euclidPoints, exponent);
         this.spore = new SporadicReporter(euclidPoints, maxKmPerHour, kmper1);
-        this.trajectoryList = new ArrayList<List<Integer>>();
-        this.coTravellers = new ArrayList<Integer>();
+        this.trajectoryList = new ArrayList<>();
+        this.coTravellers = new ArrayList<>();
         /*
          * The following three maps all have the SAME key set, i.e. shuffled travelers
          */
-        this.trajectoryAssignment = new HashMap<Integer, Integer>(); // assigns traveler to trajectory
-        this.reportTimesAssignment = new HashMap<Integer, List<Double>>(); // assigns traveler to times
-        this.reportPlacesAssignment = new HashMap<Integer, List<Integer>>(); // assigns traveler to places
+        this.trajectoryAssignment = new HashMap<>(); // assigns traveler to trajectory
+        this.reportTimesAssignment = new HashMap<>(); // assigns traveler to times
+        this.reportPlacesAssignment = new HashMap<>(); // assigns traveler to places
     }
 
     /*
@@ -100,7 +100,7 @@ public class MainClass
      * @param args[0] in Path to input file, such as parameters.csv
      * @param args[1] is Path to an output file
      */
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
 
         try {
             Reader inputParameterFile = new FileReader(args[0]);
@@ -227,7 +227,6 @@ public class MainClass
                 System.out.println("CSV file created with " + lines + " lines, called " + csvOutputFile + ".csv");
                 csvPrinter.flush();
                 writer.flush();
-                writer.close();
             }
 
             /*
@@ -251,7 +250,6 @@ public class MainClass
                         .println("CSV Places file created with " + lines + " lines, called " + csvOutputFile + "PLACES.csv");
                 csvPrinter.flush();
                 writer.flush();
-                writer.close();
             }
 
         } catch (IOException ex) {

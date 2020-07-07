@@ -18,10 +18,10 @@ import java.util.List;
  */
 public class IrregularBinAssignment {
 
-	List<Integer> placements;
+	private final List<Integer> placements;
 
 	public IrregularBinAssignment() {
-		this.placements = new ArrayList<Integer>();
+		this.placements = new ArrayList<>();
 	}
 
 	public void assign(List<? extends Comparable> bins, List<? extends Comparable> obs) {

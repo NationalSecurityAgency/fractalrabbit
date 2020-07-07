@@ -18,13 +18,13 @@ public class CensoredMultinomialTrial {
 	 * which states are allowed. In application, allowed states will be UNVISITED
 	 * states.
 	 */
-	Random g;
-	final int dimension;
-	double[] q; // unnormalized probability vector of given dimension, different each time
+	private final Random g;
+	private final int dimension;
+	private final double[] q; // unnormalized probability vector of given dimension, different each time
 				// sampling occurs
 
 	public CensoredMultinomialTrial(int n) {
-		g = new Random();
+		this.g = new Random();
 		this.dimension = n;
 		this.q = new double[this.dimension];
 	}
