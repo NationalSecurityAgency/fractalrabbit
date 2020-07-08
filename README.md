@@ -31,28 +31,28 @@ The FRACTALRABBIT stochastic mobility simulator creates realistic synthetic spor
 - [Creators](#creators)
 - [Copyright and license](#copyright-and-license)
 
-## Quick start
-
-Several quick start options are available: 
+## Status
+Java version runs from the command line:
 <p>
-<a href="https://github.com/NationalSecurityAgency/fractalrabbit/blob/master/RetroPreferentialSporadicSimulator.nb">Mathematica Notebook</a></p>
+	java -jar fractalrabbit.jar parameters.csv
+<\p>
+An example of the parameters.csv file is given below. Change it to suit your modelling needs. It permits multiple travellers
+	to follow the wame trajectory asynchronously.
+	
+## Historical Versions
+
+Two historical versions are available: 
+<p>
+<a href="https://github.com/NationalSecurityAgency/fractalrabbit/blob/master/RetroPreferentialSporadicSimulator.nb">Mathematica Notebook, for independent trajectories</a></p>
 <p>
 <a href="https://github.com/NationalSecurityAgency/fractalrabbit/blob/master/RetroPreferentialSporadicSimulatorCopy.pdf"> Text version </a></p>	
 <p>
-<a href="https://github.com/NationalSecurityAgency/fractalrabbit/blob/master/RetroPreferentialSporadicSimulator.py"> Python Version </a>
+<a href="https://github.com/NationalSecurityAgency/fractalrabbit/blob/master/RetroPreferentialSporadicSimulator.py"> Python Version, for independent trajectories </a>
 </p>
 
-## Status
-
-- (2017 VERSIONS) single trajectory models
-- (COMING IN 2019) Java version, for multiple paths
-
-## What's included
-- Mathematica Notebook (2017), and pdf printout, for single trajectory
-- Python implementation (2017), for single trajectory
 
 ## Bugs and feature requests
-- Have a bug or a feature request? Email rwdarli@nsa.gov
+- Have a bug or a feature request? Contact Github user bbux-atg
 
 ## Documentation
 - See <a href="https://github.com/NationalSecurityAgency/fractalrabbit/wiki">Wiki</a>. 
@@ -64,13 +64,13 @@ Several quick start options are available:
 - TBA
 
 ## Versioning
-- Will begin with the Java release.
+- 
 
 ## Creators
 
 **R. W. R. Darling**
 http://probabilist.us
-
+Github: probabilist-us
 
 ## Copyright and license
 
