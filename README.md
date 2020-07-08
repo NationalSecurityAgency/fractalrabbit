@@ -21,7 +21,6 @@ The FRACTALRABBIT stochastic mobility simulator creates realistic synthetic spor
 ## Table of contents
 
 - [Status](#status)
-- [Historical Versions](#historical)
 - [Bugs and feature requests](#bugs-and-feature-requests)
 - [Documentation](#documentation)
 - [Contributing](#contributing)
@@ -39,8 +38,6 @@ An example of the parameters.csv file is given below.
 Change it to suit your modelling needs. 
 It permits multiple travellers to follow the same trajectory asynchronously.
 </p>	
-## Historical Versions
-
 Two historical versions are available: 
 <p>
 <a href="https://github.com/NationalSecurityAgency/fractalrabbit/blob/master/RetroPreferentialSporadicSimulator.nb">Mathematica Notebook, for independent trajectories</a>, visible in 
