@@ -33,11 +33,12 @@ The FRACTALRABBIT stochastic mobility simulator creates realistic synthetic spor
 ## Status
 Java version runs from the command line:
 <p>
-	java -jar fractalrabbit.jar parameters.csv
-<\p>
-An example of the parameters.csv file is given below. Change it to suit your modelling needs. It permits multiple travellers
-	to follow the wame trajectory asynchronously.
-	
+	java -jar fractalrabbit.jar parameters.csv</p>
+<p>	
+An example of the parameters.csv file is given below. 
+Change it to suit your modelling needs. 
+It permits multiple travellers to follow the same trajectory asynchronously.
+</p>	
 ## Historical Versions
 
 Two historical versions are available: 
