@@ -1,8 +1,8 @@
 package utilityTests;
+
 /**
  * Ran successfully 11.14.2018
  */
-
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,10 +17,10 @@ import utilities.IrregularBinAssignment;
  */
 public class IrregularBinTest {
 
-	IrregularBinAssignment iba;
+	private IrregularBinAssignment<Double> iba;
 
 	public IrregularBinTest() {
-		iba = new IrregularBinAssignment();
+		iba = new IrregularBinAssignment<>();
 	}
 
 	/**

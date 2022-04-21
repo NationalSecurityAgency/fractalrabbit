@@ -9,7 +9,7 @@ import java.util.Arrays;
 import org.knowm.xchart.SwingWrapper;
 import org.knowm.xchart.XYChart;
 
-import utilities.HeavyTailPointProcess;
+import deprecated.HeavyTailPointProcess;
 import utilities.ScatterPlotInputData;
 
 /**

@@ -40,7 +40,7 @@ public class SporadicReporter {
 	 * Truncated Pareto inter-event times, with final parameters
 	 */
 	private HeavyTailedPartialSums htps;
-	private IrregularBinAssignment iba;
+	private IrregularBinAssignment<Double> iba;
 	private BetaDistribution dist;
 
 	private double speedbound; // units per day
@@ -68,7 +68,7 @@ public class SporadicReporter {
 		this.speedbound = 24.0 * maxKmPerHour / (kmper1); // measured in units per day
 		this.points = pointsArray;
 		this.htps = new HeavyTailedPartialSums();
-		this.iba = new IrregularBinAssignment();
+		this.iba = new IrregularBinAssignment<>();
 		this.dist = new BetaDistribution(alphaDaily, betaDaily);
 		this.uniformOrderStatistics = new ArrayList<Double>();
 		this.cumulativeTravelTime = new ArrayList<Double>();
