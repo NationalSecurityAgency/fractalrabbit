@@ -5,6 +5,14 @@
 
   <h3 align="center">FRACTALRABBIT</h3>
 <p>
+In modelling a sequence of adaptive choices by an intelligent agent (e.g. places visited, web sites browsed), memory-less random walks are unsuitable, because of the formation of agent habits and preferences. 
+ </p>
+
+<p>
+ Often these choices are only partially observed, and report times are sporadic and bursty, in contrast to regular or exponentially spaced times in classical models. 
+</p>
+
+<p>
 The FRACTALRABBIT stochastic mobility simulator creates realistic synthetic sporadic waypoint data sets. It consist of three tiers, each based on new stochastic models: </p>
 
   <p align="center">	
@@ -15,6 +23,13 @@ The FRACTALRABBIT stochastic mobility simulator creates realistic synthetic spor
   <p align="center">	 (3) A Sporadic Reporting Process models time points T at which the trajectory X is observed, with bursts of reports and heavy tailed inter-event times.</p>
   </p>
 </p>
+<p>
+ FRACTALRABBIT can be used to test algorithms applicable to sporadic waypoint data, such as (1) co-travel mining, (2) anomaly detection, and (3) extraction of maximal self-consistent subsets of corrupted data.
+<p>
+<p>
+Reference: R. W. R. Darling, "Retro-preferential Stochastic Mobility Models on Random Fractals Under Sporadic Observations", 
+<a href = "https://www.researchgate.net/publication/340741639_Retro-preferential_Stochastic_Mobility_Models_on_Random_Fractals_Under_Sporadic_Observations">DOI: 10.13140/RG.2.2.15267.40489</a>, 2018
+<p>
 
 <br>
 
