@@ -1,19 +1,17 @@
 package utilityTests;
-/**
- * Passed tests August 7, 2018
- */
-
 
 import java.util.Arrays;
 
 import utilities.CensoredMultinomialTrial;
 
 /**
- * @author rwdarli August 7, 2018
+ * Used only for development
+ * @author rwdarli
+ * @see utilities.CensoredMultinomialTrial
  */
 public class CensoredMultinomialTest {
 
-	CensoredMultinomialTrial cmt;
+	private CensoredMultinomialTrial cmt;
 
 	public CensoredMultinomialTest(int n) {
 		cmt = new CensoredMultinomialTrial(n);
@@ -33,18 +31,18 @@ public class CensoredMultinomialTest {
 		boolean[] offrange = new boolean[n];
 		Arrays.fill(offrange, false);
 		int s = 30;
-		System.out.println("Draw " + s + " samples from distribution on {0, 1, ..., " + (n-1) + "}");
+		System.out.println("Draw " + s + " samples from distribution on {0, 1, ..., " + (n - 1) + "}");
 		for (int t = 0; t < s; t++) {
 			System.out.print(test.cmt.sample(rate, offrange) + "; ");
 		}
 		System.out.println();
-		System.out.println("Same where " + (n-1) + " is unavailable.");
-		offrange[n-1] = true;
+		System.out.println("Same where " + (n - 1) + " is unavailable.");
+		offrange[n - 1] = true;
 		for (int t = 0; t < s; t++) {
 			System.out.print(test.cmt.sample(rate, offrange) + "; ");
 		}
 		System.out.println();
-		System.out.println("Same where " + (n-1) + "  and states 0 to 9 are unavailable.");
+		System.out.println("Same where " + (n - 1) + "  and states 0 to 9 are unavailable.");
 		Arrays.fill(offrange, 0, 10, true);
 		for (int t = 0; t < s; t++) {
 			System.out.print(test.cmt.sample(rate, offrange) + "; ");

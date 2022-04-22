@@ -1,5 +1,5 @@
 
-package deprecated;
+package utilities;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -7,12 +7,12 @@ import java.util.List;
 import java.util.Random;
 
 /**
- * Generate truncated Pareto random variables, X:=U^alphaDaily, U~Uniform(u0,
- * u1), where alphaDaily < -1 Cumulative sums give a Point Process with
+ * Generates truncated Pareto random variables, X:=U^alpha, U~Uniform(u0,
+ * u1), where alpha &lt; -1 Cumulative sums give a Point Process with
  * heavy-tailed inter-arrival times.
  * 
  * @author rwdarli
- * @deprecated
+ *
  */
 public class HeavyTailPointProcess {
 

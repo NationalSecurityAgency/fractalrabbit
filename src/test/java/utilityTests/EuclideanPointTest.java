@@ -1,17 +1,13 @@
 package utilityTests;
-/**
- * 
- */
-
-
 import java.util.Arrays;
 import java.util.Random;
 
 import utilities.EuclideanPoint;
 
 /**
+ * Used only for development
  * @author rwdarli
- * Worked 8.9.18
+ * @see utilities.EuclideanPoint
  */
 public class EuclideanPointTest {
 

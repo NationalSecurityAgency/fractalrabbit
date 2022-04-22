@@ -12,8 +12,9 @@ import java.util.stream.Collectors;
 import utilities.IrregularBinAssignment;
 
 /**
+ * Used only for development
  * @author rwdarli
- *
+ * @see utilities.IrregularBinAssignment
  */
 public class IrregularBinTest {
 

@@ -46,7 +46,7 @@ public class SporadicReporter {
 	private double speedbound; // units per day
 	// private double kilometersPerUnit; // # km per one distance unit for points
 	/**
-	 * Daily easonality is introduced via a Beta distribution with static
+	 * Daily seasonality is introduced via a Beta distribution with static
 	 * parameters.
 	 */
 	static final double alphaDaily = 4.17; // seasonality

@@ -1,7 +1,4 @@
 package utilityTests;
-/**
- * Passed test 1.13.19
- */
 
 
 import java.util.Arrays;
@@ -10,12 +7,13 @@ import java.util.IntSummaryStatistics;
 import utilities.PoissonVariate;
 
 /**
+ * Used only for development
  * @author rwdarli
- *
+ * @see utilities.PoissonVariate
  */
 public class PoissonVariateTest {
 
-	PoissonVariate pv;
+	private PoissonVariate pv;
 	public PoissonVariateTest(double lam) {
 		this.pv = new PoissonVariate(lam);
 	}

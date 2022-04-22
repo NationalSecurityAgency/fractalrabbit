@@ -1,5 +1,5 @@
 package simulatorTests;
-/**
+/*
  * Write CSV file of Agoraphobic Point Process in any dimension
  * June 12, 2019.
  */
@@ -13,7 +13,9 @@ import org.apache.commons.csv.CSVPrinter;
 import simulators.AgoraphobicPoints;
 
 /**
- * @author rwdarli
+ * Used only for development
+ * 
+ * @see simulators.AgoraphobicPoints
  *
  */
 public class AgoraphobicPointsWriter {
@@ -24,10 +26,7 @@ public class AgoraphobicPointsWriter {
 		this.dimension = dim;
 	}
 
-	/**
-	 * @param args
-	 */
-	public static void main(String[] args) throws Exception {
+	public static void main(String[] args) throws IOException {
 		try {
 			int n = 100;
 			int dim = 2;
@@ -38,7 +37,6 @@ public class AgoraphobicPointsWriter {
 			AgoraphobicPoints app = new AgoraphobicPoints(n, apt.dimension, h, theta);
 			app.generatePoints();
 			System.out.println("Sampling efficiency = " + app.getSamplingEfficiency() + " after " + n + " points.");
-
 			/*
 			 * Need only format the data as (traveler ID, time, x in km, y in km), and write
 			 * to csv using Apache Commons CSV

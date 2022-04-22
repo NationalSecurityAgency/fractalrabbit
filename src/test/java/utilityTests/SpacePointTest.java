@@ -3,6 +3,7 @@ package utilityTests;
 import utilities.SpacePointGenerator;
 
 /**
+ * Used only for development
  * @see utilities.SpacePointGenerator
  * @author rwdarli
  */

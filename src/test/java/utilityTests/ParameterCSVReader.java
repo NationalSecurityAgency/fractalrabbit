@@ -1,7 +1,5 @@
-/**
- * 
- */
-package utilities;
+
+package utilityTests;
 
 import java.io.FileReader;
 import java.io.IOException;
@@ -13,6 +11,7 @@ import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVRecord;
 
 /**
+ * Used only for development
  * @author rwrd
  *
  */

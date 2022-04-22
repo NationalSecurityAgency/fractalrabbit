@@ -34,18 +34,10 @@ Java version runs from the command line:
 <p>
 	java -jar fractalrabbit.jar parameters.csv</p>
 <p>	
-An example of the parameters.csv file is given below. 
+An example of the parameters.csv file is provided in the resources folder.
 Change it to suit your modelling needs. 
 It permits multiple travellers to follow the same trajectory asynchronously.
 </p>	
-Two historical versions are available: 
-<p>
-<a href="https://github.com/NationalSecurityAgency/fractalrabbit/blob/master/RetroPreferentialSporadicSimulator.nb">Mathematica Notebook, for independent trajectories</a>, visible in 
-<a href="https://github.com/NationalSecurityAgency/fractalrabbit/blob/master/RetroPreferentialSporadicSimulatorCopy.pdf"> Text version </a></p>	
-<p>
-<a href="https://github.com/NationalSecurityAgency/fractalrabbit/blob/master/RetroPreferentialSporadicSimulator.py"> Python Version, for independent trajectories </a>
-</p>
-
 
 ## Bugs and feature requests
 - Have a bug or a feature request? Contact Github user bbux-atg

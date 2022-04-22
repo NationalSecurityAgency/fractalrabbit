@@ -1,5 +1,5 @@
 package simulatorTests;
-/**
+/*
  * Tests AgoraphobicPoints and displays 2-d graphic of Agoraphobic Point Process
  * Passed April 4, 2018.
  */
@@ -12,19 +12,20 @@ import simulators.AgoraphobicPoints;
 import utilities.ScatterPlotInputData;
 
 /**
- * @author rwdarli
- *
+ * Used only for development
+ * 
+ * @see simulators.AgoraphobicPoints
  */
 public class AgoraphobicPointsTest {
 
-	final int dimension;
+	private final int dimension;
 
 	public AgoraphobicPointsTest(int dim) {
 		this.dimension = dim;
 	}
 
-	/**
-	 * @param args
+	/*
+	 * Graphics
 	 */
 	public static void main(String[] args) {
 		int n = 100;
@@ -35,17 +36,15 @@ public class AgoraphobicPointsTest {
 		AgoraphobicPoints app = new AgoraphobicPoints(n, apt.dimension, h, theta);
 		app.generatePoints();
 		double[] x = new double[n];
-		Arrays.setAll(x, j ->app.getPoints().get(j)[0]);
+		Arrays.setAll(x, j -> app.getPoints().get(j)[0]);
 		double[] y = new double[n];
-		Arrays.setAll(y, j ->app.getPoints().get(j)[1]);
-
+		Arrays.setAll(y, j -> app.getPoints().get(j)[1]);
 		// Create Scatter Plot
-		ScatterPlotInputData scatter = new ScatterPlotInputData("Agoraphobic "+h, x, y);
+		ScatterPlotInputData scatter = new ScatterPlotInputData("Agoraphobic " + h, x, y);
 		XYChart chartAPP = scatter.getChart();
 		new SwingWrapper<XYChart>(chartAPP).displayChart();
-		
 		System.out.println("Sampling efficiency = " + app.getSamplingEfficiency() + " after " + n + " points.");
-		
+
 	}
 
 }

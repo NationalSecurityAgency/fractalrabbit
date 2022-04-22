@@ -1,8 +1,4 @@
 package utilityTests;
-/**
- * August 6, 2018
- */
-
 
 import java.util.Arrays;
 import java.util.HashSet;
@@ -12,14 +8,13 @@ import java.util.Set;
 import utilities.ReweightedMultinomialTrial;
 
 /**
+ * Used only for development
+ * 
  * @author rwdarli
- *
+ * @see utilities.ReweightedMultinomialTrial
  */
 public class ReweightedMultinomialTest {
 
-	/**
-	 * 
-	 */
 	ReweightedMultinomialTrial rmt;
 
 	public ReweightedMultinomialTest() {

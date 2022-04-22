@@ -1,7 +1,9 @@
 /* THIS PUBLIC DOMAIN SOFTWARE WAS PRODUCED BY AN EMPLOYEE OF U.S. GOVERNMENT 
  * AS PART OF THEIR OFFICIAL DUTIES.
  */
+package simulators;
 
+import java.util.ArrayList;
 /**
  * 
  * Generates the Classic Retro-preferential Process.
@@ -11,9 +13,6 @@
  * 
  * @author rwdarli
  */
-package simulators;
-
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;

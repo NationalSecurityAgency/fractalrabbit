@@ -2,13 +2,12 @@ package utilities;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.SortedSet;
 
 /**
  * 
- * Suppose a[0] &lt a[1] &lt ... &lt a[n] are stored in a sorted list a ("bins")
+ * Suppose a[0] &lt; a[1] &lt; ... &lt; a[n] are stored in a sorted list a ("bin boundaries")
  * Suppose b[0] &le; b[1] &le; ... &le; b[m-1] are such that a[0] &le; b[0] and
- * b[m-1] &lt a[n] Refer to the interval [a[i-1], a[i]) as bin i-1. Consider the
+ * b[m-1] &lt; a[n] Refer to the interval [a[i-1], a[i]) as bin i-1. Consider the
  * b[j] as "observations" to be placed in "bins". Construct an int array c of
  * length m so that c[j] = k means that b[j] falls in bin k.
  * 
