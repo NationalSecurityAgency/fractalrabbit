@@ -1,6 +1,6 @@
 <p align="center">
   <a href="URL">
-    <img src="https://github.com/NationalSecurityAgency/fractalrabbit/blob/master/RabbitProfile.jpg.jpg" alt="" width=134 height=144>
+    <img src="https://github.com/NationalSecurityAgency/fractalrabbit/blob/master/resources/Rabbit-CreativeCommonsImage..jpg" alt="" width=370 height=247>
   </a>
 
   <h3 align="center">FRACTALRABBIT</h3>
