@@ -62,6 +62,7 @@ It permits multiple travellers to follow the same trajectory asynchronously.
 
 ## Contributing
 - New implementations of the three underlying models described in the technical report are welcome.
+- For a high-level project overview including build, dependency, class diagrams and javadocs see <a href="https://sourcespy.com/github/nationalsecurityagencyfractalrabbit/">Reposotry Map</a>.
 
 ## Community
 - TBA
