@@ -47,7 +47,7 @@ Reference: R. W. R. Darling, "Retro-preferential Stochastic Mobility Models on R
 ## Status
 Java version runs from the command line:
 <p>
-	java -jar fractalrabbit.jar parameters.csv</p>
+	java -jar fractalrabbit.jar parameters.csv outputfilename.csv</p>
 <p>	
 An example of the parameters.csv file is provided in the resources folder.
 Change it to suit your modelling needs. 
