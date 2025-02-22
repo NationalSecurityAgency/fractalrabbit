@@ -63,16 +63,10 @@ It permits multiple travellers to follow the same trajectory asynchronously.
 ## Contributing
 - New implementations of the three underlying models described in the technical report are welcome.
 
-## Community
-- TBA
-
-## Versioning
-- 
-
 ## Creators
 
 **R. W. R. Darling**
-https://sites.google.com/view/probabilist-us/home
+<a href=https://sites.google.com/view/probabilist-us/home>bio</a>
 Github: probabilist-us
 
 ## Copyright and license
