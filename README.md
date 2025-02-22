@@ -72,7 +72,7 @@ It permits multiple travellers to follow the same trajectory asynchronously.
 ## Creators
 
 **R. W. R. Darling**
-http://probabilist.us
+https://sites.google.com/view/probabilist-us/home
 Github: probabilist-us
 
 ## Copyright and license
