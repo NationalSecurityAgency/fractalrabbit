@@ -18,11 +18,10 @@
 			<version>3.6.1</version>
 		</dependency>
 		<!--  https://mvnrepository.com/artifact/com.google.guava/guava  -->
-
 		<dependency>
 			<groupId>com.google.guava</groupId>
 			<artifactId>guava</artifactId>
-			<version>33.1.0-jre</version>
+			<version>33.8.0-jre</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.commons</groupId>
@@ -42,72 +41,45 @@
 		<dependency>
 			<groupId>org.apache.maven.plugins</groupId>
 			<artifactId>maven-compiler-plugin</artifactId>
-			<version>3.8.1</version>
+			<version>3.14.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.maven.plugins</groupId>
 			<artifactId>maven-resources-plugin</artifactId>
-			<version>3.1.0</version>
+			<version>3.3.1</version>
 		</dependency>
 	</dependencies>
 	<build>
 		<plugins>
-
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>3.7.1</version>
+				<configuration>
+					<descriptorRefs>
+						<descriptorRef>jar-with-dependencies</descriptorRef>
+					</descriptorRefs>
+				</configuration>
+			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jar-plugin</artifactId>
-				<version>3.3.0</version>
+				<version>3.4.2</version>
 				<configuration>
 					<archive>
 						<manifest>
-							<addClasspath>true</addClasspath>
-							<classpathPrefix>lib/</classpathPrefix>
-							<mainClass>main.MainClassFR</mainClass>
+							<mainClass>fractalRabbitGenerator.MainClassFR</mainClass>
 						</manifest>
 					</archive>
 				</configuration>
-				<!--<configuration>
-					<archive>
-						<manifestFile>${project.build.outputDirectory}/META-INF/MANIFEST.MF</manifestFile>
-					</archive>
-				</configuration> -->
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.11.0</version>
+				<version>3.14.0</version>
 				<configuration>
-					<source>21</source>
-					<target>21</target>
-					<!-- <compilerArgs>-enable-preview</compilerArgs> -->
+					<release>25</release>
 				</configuration>
 			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-assembly-plugin</artifactId>
-				<version>3.6.0</version>
-				<executions>
-					<execution>
-						<phase>package</phase>
-						<goals>
-							<goal>single</goal>
-						</goals>
-						<configuration>
-							<archive>
-								<manifest>
-									<mainClass>
-										main.MainClassFR
-									</mainClass>
-								</manifest>
-							</archive>
-							<descriptorRefs>
-								<descriptorRef>jar-with-dependencies</descriptorRef>
-							</descriptorRefs>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-
 		</plugins>
 
 	</build>
